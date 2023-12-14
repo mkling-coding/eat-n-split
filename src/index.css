@@ -1,13 +1,163 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --sea-green: #07beb8;
+  --celeste: #9ceaef;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.friends-list {
+  padding: 10px 10px 0px 10px;
+}
+
+.friend-card {
+  display: flex;
+  border-radius: 10px;
+  width: 370px;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  margin-bottom: 5px;
+}
+
+.friend-card img {
+  height: 60px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.friend-card button {
+  margin-left: 5px;
+}
+
+.friend-card button,
+.add-friend button,
+.split-bill button {
+  font-weight: bold;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--sea-green);
+}
+
+.friend-card button:hover,
+.add-friend button:hover,
+.split-bill button:hover {
+  cursor: pointer;
+}
+
+.add-friend button {
+  margin-top: 10px;
+}
+
+.add-friend {
+  padding: 10px;
+}
+
+.add-friend-form {
+  width: 370px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--celeste);
+  border-radius: 10px;
+}
+
+.friend-input {
+  width: 370px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.friend-input label {
+  padding-right: 5px;
+}
+
+.friend-input input {
+  padding: 2px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.add-friend-form button {
+  float: right;
+  width: 260px;
+  margin: 5px 0px 10px 0px;
+}
+
+.split-bill {
+  width: 370px;
+  padding: 10px;
+  background-color: var(--celeste);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-input {
+  width: 370px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.split-input input {
+  width: 50px;
+}
+
+.celeste {
+  background-color: var(--celeste);
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+@media screen and (max-width: 420px) {
+  .friend-card {
+    width: 290px;
+  }
+
+  .add-friend-form {
+    width: 290px;
+  }
+
+  .friend-input {
+    width: 290px;
+  }
+
+  .friend-input input {
+    width: 170px;
+  }
+
+  .add-friend-form button {
+    width: 180px;
+  }
+
+  .split-bill {
+    width: 290px;
+  }
+
+  .split-input {
+    width: 290px;
+  }
 }
